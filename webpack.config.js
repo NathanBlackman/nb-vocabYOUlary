@@ -5,6 +5,7 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const ESLintPlugin = require('eslint-webpack-plugin');
 
 const path = require('path');
+const { EvalDevToolModulePlugin } = require('webpack');
 const dotenv = require('dotenv').config({path: __dirname + '/.env'});
 
 module.exports = {
@@ -66,4 +67,6 @@ module.exports = {
   devServer: {
     open: true
   }
+
+  // devtool: "source-map"
 };
